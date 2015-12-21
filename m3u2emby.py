@@ -74,8 +74,12 @@ def write_emby_playlist(playlist):
     xml += '\t\t</Shares>\n'
     xml += '\t</Item>\n'
 
-    file_name = title + ' [playlist]'
-    out = open(os.path.join(TARGET_DIR, file_name), "w")
+    dir_name = os.path.join(TARGET_DIR, title + ' [playlist]')
+
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
+
+    out = open(os.path.join(dir_name, 'playlist.xml'), "w")
     out.write(xml)
     out.close()
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+	<Item>
+		<PlaylistMediaType>Audio</PlaylistMediaType>
+		<Added>00/00/00 0:00:00 AM</Added>
+		<LockData>false</LockData>
+		<LocalTitle>MyPlaylist</LocalTitle>
+		<PlaylistItems>
+			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\album1\Song1.mp3</Path></PlaylistItem>
+			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\album1\Song2.mp3</Path></PlaylistItem>
+			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\album1\Song3.mp3</Path></PlaylistItem>
+			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\album1\Another Song.mp3</Path></PlaylistItem>
+		</PlaylistItems>
+		<Shares>
+			<Share>
+				<UserId>f102fb850ada4661a6c5698c6c3c8f09</UserId>
+				<CanEdit>false</CanEdit>
+			</Share>
+			<Share>
+				<UserId>95c10e6117da4429a728f35b81ace850</UserId>
+				<CanEdit>false</CanEdit>
+			</Share>
+		</Shares>
+	</Item>

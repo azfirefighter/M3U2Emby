@@ -1,0 +1,7 @@
+#EXTM3U
+#EXTINF:221,A song - A Band
+artist\album1\Song1.mp3
+artist\album1\Song2.mp3
+#EXTINF
+artist\album1\Song3.mp3
+artist\album1\Another Song.mp3

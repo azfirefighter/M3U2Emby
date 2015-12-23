@@ -1,0 +1,7 @@
+[dir]
+source = /path/to/my/source
+target = /var/lib/emby-server/data/playlists/
+
+[users]
+edit = true
+users = <user_id1>;<user_id2>

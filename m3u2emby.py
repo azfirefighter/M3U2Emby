@@ -1,4 +1,5 @@
 import os
+import ConfigParser
 
 __author__ = "Tilman Griesel"
 __copyright__ = "Copyright 2015, rocketengine.io"
@@ -6,14 +7,22 @@ __license__ = "MIT"
 __maintainer__ = "Tilman Griesel"
 __email__ = "griesel@rocketengine.io"
 
+config = ConfigParser.RawConfigParser()
+config.read('config.cfg')
+
 ##############################
 # CONFIG
 ##############################
-SOURCE_DIR = "C:\\dev\\ws\\private\\M3U2Emby\\testdata"
-TARGET_DIR = "C:\\dev\\ws\\private\\M3U2Emby\\out"
-CAN_EDIT = False
-USERS = ['f102fb850ada4661a6c5698c6c3c8f09',
-         '95c10e6117da4429a728f35b81ace850']
+SOURCE_DIR = config.get("dir", "source")
+TARGET_DIR = config.get("dir", "target")
+CAN_EDIT = config.getboolean("users", "edit")
+USERS = str(config.get("users", "users")).split(";")
+
+print "Source: " + SOURCE_DIR
+print "Target: " + TARGET_DIR
+print "Can Edit: " + str(CAN_EDIT)
+print "Users: " + str(USERS)
+
 ##############################
 
 def locate_m3u():
@@ -35,7 +44,10 @@ def read_m3u_playlist(path):
         if entry[0] != "#":
             # Create Path
             entry_path = os.path.join(head, entry.rstrip())
-            result.append(entry_path)
+            if os.path.isfile(entry_path):
+                result.append(entry_path)
+            else:
+                print "Invalid playlist item found. File does not exists. Path: " + entry_path
 
     ret['title'] = tail.replace('.m3u', '')
     ret['data'] = result

@@ -5,20 +5,16 @@
 		<LockData>false</LockData>
 		<LocalTitle>Another Playlist</LocalTitle>
 		<PlaylistItems>
-			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\album1\Some Song.mp3</Path></PlaylistItem>
-			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\album1\A Song.mp3</Path></PlaylistItem>
-			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\</Path></PlaylistItem>
-			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\</Path></PlaylistItem>
-			<PlaylistItem><Path>C:\dev\ws\private\M3U2Emby\testdata\artist\awesome album\Awesome Song.mp3</Path></PlaylistItem>
+			<PlaylistItem><Path>C:\\dev\\ws\\private\\M3U2Emby\\testdata\artist\album1\Some Song.mp3</Path></PlaylistItem>
 		</PlaylistItems>
 		<Shares>
 			<Share>
 				<UserId>f102fb850ada4661a6c5698c6c3c8f09</UserId>
-				<CanEdit>false</CanEdit>
+				<CanEdit>true</CanEdit>
 			</Share>
 			<Share>
 				<UserId>95c10e6117da4429a728f35b81ace850</UserId>
-				<CanEdit>false</CanEdit>
+				<CanEdit>true</CanEdit>
 			</Share>
 		</Shares>
 	</Item>

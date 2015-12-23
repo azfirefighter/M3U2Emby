@@ -54,6 +54,15 @@ def read_m3u_playlist(path):
 
     return ret
 
+def escapeXMLChars(data):
+    # Escape special chars
+    data = data.replace('"', "&quot;")
+    data = data.replace("'", "&apos;")
+    data = data.replace("<", "&lt;")
+    data = data.replace(">", "&gt;")
+    data = data.replace("&", "&amp;")
+    return data
+
 def write_emby_playlist(playlist):
     '''
     Don't use XML libs
@@ -68,12 +77,12 @@ def write_emby_playlist(playlist):
     xml += '\t\t<PlaylistMediaType>Audio</PlaylistMediaType>\n'
     xml += '\t\t<Added>00/00/00 0:00:00 AM</Added>\n' # TODO: Set time
     xml += '\t\t<LockData>false</LockData>\n'
-    xml += '\t\t<LocalTitle>' + title + '</LocalTitle>\n'
+    xml += '\t\t<LocalTitle>' + escapeXMLChars(title) + '</LocalTitle>\n'
 
     xml += '\t\t<PlaylistItems>\n'
     for entry in data:
         xml += '\t\t\t<PlaylistItem>'
-        xml += '<Path>' + entry + '</Path>'
+        xml += '<Path>' + escapeXMLChars(entry) + '</Path>'
         xml += '</PlaylistItem>\n'
     xml += '\t\t</PlaylistItems>\n'
 
